@@ -16,7 +16,7 @@ function RotatingCube() {
       <meshStandardMaterial color="#00ffff" metalness={0.7} roughness={0.5} />
       {/* Outline edges for 3D feel */}
       <lineSegments>
-        <edgesGeometry args={[new THREE.BoxGeometry(1, 1, 1)]} />
+        <edgesGeometry args={[new THREE.BoxGeometry(2, 2, 2)]} />
         <lineBasicMaterial color="#020000ff" />
       </lineSegments>
     </mesh>
@@ -34,7 +34,7 @@ export default function ThreeScene() {
       }}
     >
       {/* Dark blue visible light glow */}
-      <pointLight position={[5, 5, 5]} intensity={5} color="#fafbfcff" />
+      <pointLight position={[5, 5, 5]} intensity={50} color="#fafbfcff" />
       {/* Slight ambient light to make cube edges visible */}
       <ambientLight intensity={0.4} />
       <RotatingCube />
