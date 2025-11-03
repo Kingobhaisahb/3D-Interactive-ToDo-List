@@ -1,46 +1,43 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useRef } from "react";
+import * as THREE from "three";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 function RotatingCube() {
   const meshRef = useRef();
 
-  useFrame((state) => {
-    // Rotate the cube
-    meshRef.current.rotation.x += 0.01;
-    meshRef.current.rotation.y += 0.01;
-
-    // Create a rainbow-like color shift over time
-    const time = state.clock.getElapsedTime();
-    const color = new THREE.Color(`hsl(${(time * 40) % 360}, 100%, 50%)`);
-
-    // Apply color + emissive glow dynamically
-    meshRef.current.material.color = color;
-    meshRef.current.material.emissive = color.clone().multiplyScalar(0.4);
+  useFrame(() => {
+    meshRef.current.rotation.x += 0.005;
+    meshRef.current.rotation.y += 0.005;
   });
 
   return (
-    <mesh ref={meshRef} scale={1.5}>
+    <mesh ref={meshRef} scale={1.1}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshPhongMaterial color="#0040ff" emissive="#001133" shininess={80} />
+      <meshStandardMaterial color="#00ffff" metalness={0.7} roughness={0.5} />
+      {/* Outline edges for 3D feel */}
+      <lineSegments>
+        <edgesGeometry args={[new THREE.BoxGeometry(1, 1, 1)]} />
+        <lineBasicMaterial color="#020000ff" />
+      </lineSegments>
     </mesh>
   );
 }
 
 export default function ThreeScene() {
   return (
-    <Canvas style={{ height: '100vh', background: '#0d0d0d' }}>
-      {/* Lights for realistic gloss and glow */}
+    <Canvas
+      camera={{ position: [3, 2, 5], fov: 50 }}
+      style={{
+        height: "100vh",
+        width: "100vw",
+        background: "linear-gradient(to bottom, #000000 70%)",
+      }}
+    >
+      {/* Dark blue visible light glow */}
+      <pointLight position={[5, 5, 5]} intensity={5} color="#fafbfcff" />
+      {/* Slight ambient light to make cube edges visible */}
       <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={1.2} />
-      <spotLight position={[-5, 5, 5]} angle={0.5} penumbra={0.5} intensity={1.5} />
-
-      {/* Rotating rainbow cube */}
       <RotatingCube />
-
-      {/* OrbitControls for mouse interaction */}
-      <OrbitControls enableZoom={true} />
     </Canvas>
   );
 }
