@@ -30,7 +30,7 @@ export default function ThreeScene() {
       style={{
         height: '100vh',
         width: '100vw',
-        background: 'radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.99), #000000ff 40%)',
+        background: 'radial-gradient(circle at 100% 0%, rgba(119, 123, 17, 0.99), #0e0f46ff 55%)',
 }}
 
     >
