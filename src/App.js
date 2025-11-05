@@ -1,6 +1,7 @@
 import React from "react";
 import ThreeScene from "./Components/ThreeScene";
 import TextSection from "./Components/TextSection";
+import "./App.css";
 
 function App(){
   return (

@@ -3,8 +3,8 @@ import React from "react";
 function TextSection(){
     return (
         <div>
-            <h1>Hello World</h1>
-            <p>This is my first text in React!</p>
+            <h1>Start Making A ToDo List</h1>
+            <p></p>
         </div>
     );
 }

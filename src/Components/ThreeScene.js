@@ -34,12 +34,12 @@ export default function ThreeScene() {
         zIndex: -1,                             // STAYS IN THE SAME PLACE
         height: '100vh',
         width: '100vw',
-        background: 'radial-gradient(circle at 100% 0%, rgba(119, 123, 17, 0.99), #0e0f46ff 55%)',
+        background: 'radial-gradient(circle at 100% 0%, rgba(119, 123, 17, 0.99), #04042eff 55%)',
 }}
 
     >
       {/* Dark blue visible light glow */}
-      <pointLight position={[5, 5, 5]} intensity={50} color="#fafbfcff" />
+      <pointLight position={[5, 5, 5]} intensity={30} color="#fafbfcff" />
       {/* Slight ambient light to make cube edges visible */}
       <ambientLight intensity={0.4} />
       <RotatingCube />
