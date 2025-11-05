@@ -28,6 +28,10 @@ export default function ThreeScene() {
     <Canvas
       camera={{ position: [3, 2, 5], fov: 50 }}
       style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: -1,                             // STAYS IN THE SAME PLACE
         height: '100vh',
         width: '100vw',
         background: 'radial-gradient(circle at 100% 0%, rgba(119, 123, 17, 0.99), #0e0f46ff 55%)',
