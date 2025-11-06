@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: transparent; /* ✅ fully transparent */
+  color: rgb(0, 0, 0);
+  z-index: 10; /* keeps it above everything */
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.navbar-left .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff; /* cyan glow */
+  text-shadow: 0 0 15px #f7fafa, 0 0 25px #f8f9f9;
+}
+
+.navbar-right ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-right li:hover {
+  color: #f9fafa; /* subtle cyan on hover */
+  transform: scale(1.05);
+}
