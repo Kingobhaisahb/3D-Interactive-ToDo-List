@@ -34,7 +34,7 @@ export default function ThreeScene() {
         zIndex: -1,                             // STAYS IN THE SAME PLACE
         height: '100vh',
         width: '100vw',
-        background: 'radial-gradient(circle at 100% 0%, rgba(119, 123, 17, 0.99), #04042eff 55%)',
+        background: 'radial-gradient(circle at 100% 0%, rgba(3, 41, 71, 0.99), #020221ff 55%)',
 }}
 
     >
