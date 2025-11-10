@@ -5,7 +5,7 @@ function Nav(){
     return(
         <nav className="navbar">
       <div className="navbar-left">
-        <h1 className="logo">ToDo</h1>
+        <h1 className="logo">ToDo List</h1>
       </div>
       <div className="navbar-right">
         <ul>

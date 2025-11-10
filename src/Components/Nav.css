@@ -8,34 +8,37 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  background: transparent; /* ✅ fully transparent */
+  background: rgb(79, 78, 78); /* ✅ fully transparent */
   color: rgb(0, 0, 0);
   z-index: 10; /* keeps it above everything */
   font-family: Verdana, Arial, sans-serif;
 }
 
 .navbar-left .logo {
-  font-size: 1.8rem;
+  font-size: 1.5 rem;
+  word-spacing: 1px;
   font-weight: bold;
-  color: #00ffff; /* cyan glow */
-  text-shadow: 0 0 15px #f7fafa, 0 0 25px #f8f9f9;
+  color: #fd6500; /* cyan glow */
+  text-shadow: 0 0 70px #ff0202, 0 0 30px #d5ff02;
 }
 
 .navbar-right ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 150px;
   margin: 0;
   padding: 0;
+  color:#000000;
+  word-spacing: 1px
 }
 
 .navbar-right li {
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 900;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .navbar-right li:hover {
-  color: #f9fafa; /* subtle cyan on hover */
-  transform: scale(1.05);
+  color: #ffffff; 
+  transform: scale(1.10);
 }
