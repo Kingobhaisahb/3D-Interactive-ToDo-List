@@ -28,8 +28,11 @@ function FloatingInteractiveCube() {
       meshRef.current.position.y = Math.sin(t * 1.5) * 0.2;
 
       // 🌀 Smooth rotation towards mouse direction
-      meshRef.current.rotation.y += (mouse.x * Math.PI - meshRef.current.rotation.y) * 0.05;
-      meshRef.current.rotation.x += (mouse.y * Math.PI - meshRef.current.rotation.x) * 0.05;
+      meshRef.current.rotation.y += (mouse.x * Math.PI - meshRef.current.rotation.y) * 0.01;
+      meshRef.current.rotation.x += (mouse.y * Math.PI - meshRef.current.rotation.x) * 0.01;
+      meshRef.current.rotation.y += 0.0008;
+      meshRef.current.rotation.x += 0.0004;
+
     }
   });
 
